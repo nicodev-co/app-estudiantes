@@ -46,20 +46,19 @@ class AssignGradeForm extends Form
     {
         $this->validate();
 
-        foreach ($this->grades as $grade) {
+        foreach ($this->grades as $index => $grade) {
 
-            $gradeIndex = array_search($grade, $this->grades);
-            $gradeName = $this->gradeNames[$gradeIndex] ?? 'Nota';
-
+            $gradeName = $this->gradeNames[$index] ?? 'Nota';
 
             $this->student->grades()->updateOrCreate(
                 [
                     'subject_id' => $this->subject_id,
-                    'name' => $gradeName
+                    'name' => $gradeName,
                 ],
-                ['grade' => $grade]
+                [
+                    'grade' => $grade
+                ]
             );
         }
-
     }
 }
