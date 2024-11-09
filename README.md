@@ -61,6 +61,20 @@ php artisan serve
 
 El proyecto estará disponible en `http://localhost:8000`.
 
+## Usuarios de prueba
+
+Los siguientes usuarios están disponibles para autenticarse después de ejecutar los seeders:
+
+- **Administrador**
+  - Nombre: Angela
+  - Documento: 123456789
+  - Contraseña: Aa123456789*
+
+- **Profesor**
+  - Nombre: Rodrigo
+  - Documento: 12345678
+  - Contraseña: Ro12345678*
+
 ## Licencia
 
 Este proyecto está licenciado bajo la [MIT License](LICENSE).
